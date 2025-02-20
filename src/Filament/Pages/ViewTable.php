@@ -100,9 +100,6 @@ class ViewTable extends Page  implements HasTable
                 ]);
             })
             ->actions([
-                ActionGroup::make([
-                    Action::make('t')
-                ])
             ]);
     }
 

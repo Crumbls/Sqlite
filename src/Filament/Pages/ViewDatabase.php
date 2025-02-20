@@ -13,6 +13,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
+use Filament\Tables\Actions\EditAction;
 use Illuminate\Support\Facades\DB;
 use Filament\Forms\Get;
 use Filament\Pages\Page;
@@ -215,11 +216,13 @@ class ViewDatabase extends Page  implements HasTable
                     'tableName' => $record->name
                 ]);
             })
+            /*
             ->actions([
                 ActionGroup::make([
-                    Action::make('t')
+                    EditAction::make('t')
                 ])
             ])
+            */
             ->paginated(function (\Filament\Tables\Table $table) {
                 return false;
             })
