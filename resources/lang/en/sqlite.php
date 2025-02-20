@@ -10,6 +10,7 @@ return [
     'rows' => 'Rows',
     'editing' => 'Editing',
     'actions' => [
+        'create_record' => 'Create',
         'save_changes' => 'Save Changes'
     ]
 
