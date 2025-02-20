@@ -18,6 +18,7 @@ use Filament\Panel;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Actions\CreateAction;
+use Filament\Tables\Actions\DeleteAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
@@ -105,6 +106,12 @@ class ViewTable extends Page  implements HasTable
                     'recordId' => $record->$primaryKey
                 ]);
             })
+            ->actions([
+                ActionGroup::make([
+                    DeleteAction::make()
+
+                ])
+            ])
             ->headerActions([
                 CreateAction::make('create')
                     ->label(trans('sqlite::sqlite.actions.create_record'))
